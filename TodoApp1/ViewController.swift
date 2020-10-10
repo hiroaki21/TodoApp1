@@ -20,6 +20,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         textField.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +38,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        cell.selectionStyle = .none
         cell.textLabel?.text = textArray[indexPath.row]
+        cell.textLabel?.font = .boldSystemFont(ofSize: 30)
+        cell.textLabel?.textColor = .white
         cell.imageView!.image = UIImage(named: "checkImage")
         return cell
     }
