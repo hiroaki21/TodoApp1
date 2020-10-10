@@ -23,7 +23,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return textArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,6 +31,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = textArray[indexPath.row]
+        cell.imageView!.image = UIImage(named: "checkImage")
         return cell
     }
     
@@ -48,6 +53,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         textField.resignFirstResponder()
         textField.text = ""
         tableView.reloadData()
+        return true
     }
 
 }
