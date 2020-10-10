@@ -41,7 +41,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let nextVC = storyboard?.instantiateViewController(identifier: "next") as! NextViewController
+        
+        nextVC.todoString = textArray[indexPath.row]
+        navigationController?.pushViewController(nextVC, animated:  true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

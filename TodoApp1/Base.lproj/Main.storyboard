@@ -53,7 +53,7 @@
                     <connections>
                         <outlet property="tableView" destination="7nB-Se-oqI" id="AZV-tb-Nvp"/>
                         <outlet property="textField" destination="UWv-fF-M8T" id="WDs-4X-EnC"/>
-                        <segue destination="E30-aL-yRU" kind="show" identifier="next" id="OWm-No-mQH"/>
+                        <segue destination="E30-aL-yRU" kind="show" identifier="" id="OWm-No-mQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,7 +63,7 @@
         <!--Next View Controller-->
         <scene sceneID="M3M-4w-52X">
             <objects>
-                <viewController id="E30-aL-yRU" customClass="NextViewController" customModule="TodoApp1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E30-aL-yRU" customClass="NextViewController" customModule="TodoApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aN0-ST-Z1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
